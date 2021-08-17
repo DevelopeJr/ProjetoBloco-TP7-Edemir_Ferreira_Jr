@@ -104,7 +104,7 @@ namespace MercadoLivre.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,DataNascimento,Email,Online,Offline")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,DataNascimento,Email,Online,Offline, UserId")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
