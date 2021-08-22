@@ -115,6 +115,8 @@ namespace MercadoLivre.Controllers
             {
                 try
                 {
+                    usuario.UserId = _userManager.GetUserId(User);
+
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
